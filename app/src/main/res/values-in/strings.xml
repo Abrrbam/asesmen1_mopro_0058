@@ -17,7 +17,6 @@
     <string name="ph_description">Deskripsikan agenda kamu supaya kamu bisa mengingatnya nanti...</string>
     <string name="note">Catat</string>
     <string name="intro_add">Silahkan isi formulir untuk membuat agenda.</string>
-    <string name="image_name">Image: %1$s</string>
     <string name="input_invalid">Tidak boleh kosong</string>
     <string name="description">Deskripsi</string>
     <string name="time_agenda">Waktu Agenda</string>
@@ -26,5 +25,4 @@
     <string name="type_note">Tipe: %1$s</string>
     <string name="title_note">Judul: %1$s</string>
     <string name="description_note">Deskripsi: %1$s</string>
-    <string name="empty_list">Belum ada agenda yang dibuat</string>
 </resources>
