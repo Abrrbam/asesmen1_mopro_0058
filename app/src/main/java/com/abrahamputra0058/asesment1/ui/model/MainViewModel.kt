@@ -1,7 +1,6 @@
 package com.abrahamputra0058.asesment1.ui.model
 
 import androidx.lifecycle.ViewModel
-import com.abrahamputra0058.asesment1.R
 
 class MainViewModel:ViewModel() {
     val data = listOf(
@@ -12,7 +11,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-12",
             waktu = "09:00",
             deskripsi = "Learn about advanced Jetpack Compose techniques.",
-            imageResId = R.mipmap.course
         ),
         Agenda(
             id = 2,
@@ -21,7 +19,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-13",
             waktu = "23:59",
             deskripsi = "Finalize and submit the project report via the portal.",
-            imageResId = R.mipmap.task
         ),
         Agenda(
             id = 3,
@@ -30,7 +27,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-14",
             waktu = "14:00",
             deskripsi = "Discuss progress and align on deliverables.",
-            imageResId = R.mipmap.other
         ),
         Agenda(
             id = 4,
@@ -39,7 +35,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-15",
             waktu = "10:30",
             deskripsi = "Focus on system design principles.",
-            imageResId = R.mipmap.course
         ),
         Agenda(
             id = 5,
@@ -48,7 +43,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-16",
             waktu = "20:00",
             deskripsi = "Finish assignments for the upcoming lecture.",
-            imageResId = R.mipmap.task
         ),
         Agenda(
             id = 6,
@@ -57,7 +51,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-17",
             waktu = "10:00",
             deskripsi = "Learn techniques for outdoor photography.",
-            imageResId = R.mipmap.other
         ),
         Agenda(
             id = 7,
@@ -66,7 +59,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-18",
             waktu = "08:00",
             deskripsi = "Dive into database normalization and optimization.",
-            imageResId = R.mipmap.course
         ),
         Agenda(
             id = 8,
@@ -75,7 +67,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-19",
             waktu = "18:00",
             deskripsi = "Create slides for the final presentation.",
-            imageResId = R.mipmap.task
         ),
         Agenda(
             id = 9,
@@ -84,7 +75,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-20",
             waktu = "11:00",
             deskripsi = "Participate in a tree-planting activity.",
-            imageResId = R.mipmap.other
         ),
         Agenda(
             id = 10,
@@ -93,7 +83,6 @@ class MainViewModel:ViewModel() {
             tanggal = "2025-04-21",
             waktu = "09:30",
             deskripsi = "Learn about quantum mechanics.",
-            imageResId = R.mipmap.course
         )
     )
 }

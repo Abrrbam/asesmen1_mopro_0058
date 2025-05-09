@@ -1,5 +1,8 @@
 package com.abrahamputra0058.asesment1.ui.screen
 
+import android.content.Context
+import android.content.Intent
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.gestures.awaitEachGesture
 import androidx.compose.foundation.gestures.awaitFirstDown
 import androidx.compose.foundation.gestures.waitForUpOrCancellation
@@ -52,6 +55,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.input.pointer.PointerEventPass
 import androidx.compose.ui.input.pointer.pointerInput
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
@@ -108,7 +114,7 @@ fun DetailAgendaScreen(navController: NavHostController) {
 @Composable
 fun FormDetailAgenda(modifier: Modifier = Modifier) {
 //    Implicit intent
-//    val context = LocalContext.current
+    val context = LocalContext.current
 
     //  Pembuatan Dropdown
     val options = listOf(
@@ -195,24 +201,29 @@ fun FormDetailAgenda(modifier: Modifier = Modifier) {
             onClick = {
                 judulError = (judul == "" || judul == "0")
                 deskripsiError = (deskripsi == "" || deskripsi == "0")
-
                 dateError = (selectedDate == null)
 
-                if (judulError || deskripsiError || dateError) return@Button
+//                if (judulError || deskripsiError || dateError) return@Button
             },
-            modifier = modifier.padding(top = 4.dp),
             contentPadding = PaddingValues(horizontal = 32.dp, vertical = 4.dp)
         ) {
             Text(text = stringResource(R.string.note))
         }
 
-        if (!judulError){
+        if (!judulError && !deskripsiError){
             HorizontalDivider(
                 modifier = Modifier.padding(vertical = 8.dp), thickness = 1.dp
             )
+
+            Image(
+                painter = painterResource(R.drawable.other),
+                contentScale = ContentScale.FillBounds,
+                contentDescription = stringResource(R.string.image_name)
+            )
 //            Tampilkan tanggal, waktu, tipe agenda, judul, dan deskripsi/detail
             Text(
-                text = stringResource(R.string.date_time_note, convertMillisToDate(selectedDate!!), selectedTime),
+                text = stringResource(R.string.date_time_note, convertMillisToDate(selectedDate ?: System.currentTimeMillis()),
+                    selectedTime),
                 style = MaterialTheme.typography.headlineMedium
             )
             Text(text = stringResource(R.string.type_note, selectedOptionText),
@@ -223,18 +234,18 @@ fun FormDetailAgenda(modifier: Modifier = Modifier) {
                 style = MaterialTheme.typography.bodyMedium)
 
 //            Share/ Implicit intent
-//            Button(
-//                onClick = {
-//                    shareAgenda(
-//                        context = context,
-//                        message = context.getString(R.string.template_share, convertMillisToDate(selectedDate!!), selectedTime, selectedOptionText, judul, deskripsi)
-//                    )
-//                },
-//                modifier = Modifier.padding(8.dp),
-//                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
-//            ) {
-//                Text(text = stringResource(R.string.share))
-//            }
+            Button(
+                onClick = {
+                    shareAgenda(
+                        context = context,
+                        message = context.getString(R.string.template_share, convertMillisToDate(selectedDate ?: System.currentTimeMillis()), selectedTime, selectedOptionText, judul, deskripsi)
+                    )
+                },
+                modifier = Modifier.padding(8.dp),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 16.dp)
+            ) {
+                Text(text = stringResource(R.string.share))
+            }
         }
 
     }
@@ -393,6 +404,15 @@ fun SimpleTimeInput(
     }
 }
 
+private fun shareAgenda(context: Context, message: String){
+    val shareIntent = Intent(Intent.ACTION_SEND).apply {
+        type = "text/plain"
+        putExtra(Intent.EXTRA_TEXT, message)
+    }
+    if (shareIntent.resolveActivity(context.packageManager) != null) {
+        context.startActivity(shareIntent)
+    }
+}
 
 @Composable
 fun IconPicker(isError: Boolean) {

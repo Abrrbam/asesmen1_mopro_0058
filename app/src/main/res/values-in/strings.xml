@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Asesment1</string>
     <string name="about_app">Tentang Aplikasi</string>
-    <string name="template_share">Hey, saya membuat sebuah agenda untuk kamu, ayo cek! Tanggal: %1$s | Waktu: %2$s, Tipe agenda: %3$s,  Judul agenda: %4$s, Detail: %5$s</string>
+    <string name="template_share">Hey, saya membuat sebuah agenda untuk kamu, ayo cek!\\n\\nTanggal: %1$s | Waktu: %2$s, Tipe agenda: %3$s,  Judul agenda: %4$s, Detail: %5$s</string>
     <string name="content_about">PlanWell adalah aplikasi pencatatan jadwal keseharian seperti jadwal kuliah, deadline tugas, atau reminder lainnya. Mari mulai catat jadwalnya supaya tidak kelupaan!\n\nAplikasi ini memungkinkan pengguna untuk membuat satu catatan saja. Catatan tersebut tidak dapat disimpan, tetapi dapat langsung dibagikan setelah dibuat, jika diinginkan.</string>
     <string name="back">Kembali</string>
     <string name="intro_app">Tampilan di bawah ini untuk menampilkan scrollable list</string>
@@ -17,6 +17,7 @@
     <string name="ph_description">Deskripsikan agenda kamu supaya kamu bisa mengingatnya nanti...</string>
     <string name="note">Catat</string>
     <string name="intro_add">Silahkan isi formulir untuk membuat agenda.</string>
+    <string name="image_name">Gambar: %1$s</string>
     <string name="input_invalid">Tidak boleh kosong</string>
     <string name="description">Deskripsi</string>
     <string name="time_agenda">Waktu Agenda</string>
@@ -25,4 +26,5 @@
     <string name="type_note">Tipe: %1$s</string>
     <string name="title_note">Judul: %1$s</string>
     <string name="description_note">Deskripsi: %1$s</string>
+    <string name="empty_list">Agenda tidak ada</string>
 </resources>

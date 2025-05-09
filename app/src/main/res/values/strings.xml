@@ -4,7 +4,7 @@
     
 <!--    Intent-->
     <string name="share">Share</string>
-    <string name="template_share">Hey, I\'ve made an agenda for you, check it out! Date: %1$s | Time: %2$s, Type of agenda: %3$s,  Agenda Title: %4$s, Detail: %5$s</string>
+    <string name="template_share">Hey, I\'ve made an agenda for you, check it out!\\n\\nDate: %1$s | Time: %2$s, Type of agenda: %3$s,  Agenda Title: %4$s, Detail: %5$s</string>
 
 <!--    App-->
     <string name="content_about">PlanWell is an application for organizing daily schedules, such as class timetables, assignment deadlines, or other reminders. Let\\\'s start logging your schedule so you won\\\'t forget anything!  This app allows users to create a single note. The note cannot be saved, but it can be shared immediately after creation, if desired.</string>
